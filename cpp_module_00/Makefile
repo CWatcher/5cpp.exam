@@ -8,16 +8,15 @@ all		: $(NAME)
 
 -include $(DEP)
 
-%.o		: %.cpp
+%.o		: %.cpp Makefile
 	$(CXX) $(CXXFLAGS) -MMD -c $<
-# $(@:%.o=%.cpp)
 
 $(NAME)	: $(OBJ) Makefile
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 clean	:
-	$(RM) $(OBJ)
 	$(RM) $(DEP)
+	$(RM) $(OBJ)
 
 fclean	: clean
 	$(RM) $(NAME)
