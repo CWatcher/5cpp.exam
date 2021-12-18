@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -16,10 +17,8 @@ private:
 	string	_name;
 	string	_title;
 public:
-	~Warlock() {
-// When he dies, he says:
-
-// <NAME>: My job here is done!
+	~Warlock()
+	{	cout<< _name << ": My job here is done!" << endl;
 	};
 
 	string const & getName() const { return _name; }
@@ -30,29 +29,12 @@ public:
 
 	string& setTitle( string const& title ) { _title = title; return _title; }
 
-// Your Warlock will also have, in addition to whatever's required by Coplien's
-// form, a constructor that takes, in this order, its name and title.
 	Warlock( string const& name, string const& title )
-	: _name( name ), _title ( title ) {
-
-// Upon creation, the Warlock says :
-
-// <NAME>: This looks like another boring day.
-
-// Of course, whenever we use placeholders like <NAME>, <TITLE>, etc...
-// in outputs, you will replace them by the appropriate value. Without the < and >.
-
+	: _name( name ), _title ( title )
+	{	cout << _name << ": This looks like another boring day." << endl;
 	};
 
-
-// Our Warlock must also be able to introduce himself, while boasting with all its
-// might.
-
-// So you will write the following function:
-	void introduce() const {
-
-// It must display:
-
-// <NAME>: I am <NAME>, <TITLE> !
+	void introduce() const
+	{	cout << _name << ": I am " << _name << ", " << _title << "!" << endl;
 	};
 };
