@@ -5,25 +5,26 @@
 using namespace std;
 
 class ASpell {
-private:
-	string	_name;
-	string	_title;
-
 	ASpell() {};
-	ASpell( ASpell const& ) {};
-	ASpell& operator=( ASpell const& ) { return *this; };
+protected:
+	string	_name;
+	string	_effects;
 public:
-	ASpell( string const& name, string const& title )
-	: _name( name ), _title ( title )
-	{	cout << _name << ": This looks like another boring day." << endl;
-	}
-	~ASpell()
-	{	cout<< _name << ": My job here is done!" << endl;
-	}
-	string const & getName() const { return _name; }
-	string const & getTitle() const { return _title; }
-	string& setTitle( string const& title ) { _title = title; return _title; }
-	void introduce() const
-	{	cout << _name << ": I am " << _name << ", " << _title << "!" << endl;
-	}
+	ASpell( ASpell const& src )
+	: _name( src._name ), _effects ( src._effects )
+	{}
+	ASpell( string const& name, string const& effects )
+	: _name( name ), _effects ( effects )
+	{}
+	virtual	~ASpell()
+	{}
+	ASpell&			operator=( ASpell const& src )
+	{
+		_name = src._name;
+		_effects = src._effects;
+		return *this;
+	};
+	string const &	getName() const { return _name; }
+	string const &	getEffects() const { return _effects; }
+	virtual ASpell*	clone() const = 0;
 };

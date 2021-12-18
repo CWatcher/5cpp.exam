@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "ASpell.hpp"
 
 using namespace std;
 
