@@ -5,5 +5,7 @@ alias g=git
 alias gp='git push'
 alias gl='git log'
 alias m=make
+alias mcl='make clean'
+alias mf='make fclean'
 alias mr='make re'
 alias ll='ls -la'
