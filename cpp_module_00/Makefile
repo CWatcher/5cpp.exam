@@ -21,7 +21,7 @@ clean	:
 fclean	: clean
 	$(RM) $(NAME)
 
-# re		: fclean
-# 	make
+re		: fclean
+	make
 
 .PHONHY	: all clean fclean re
