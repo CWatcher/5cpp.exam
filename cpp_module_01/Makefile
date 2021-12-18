@@ -1,4 +1,4 @@
-SRC			= Warlock.cpp ASpell.cpp main.cpp
+SRC			= Warlock.cpp ASpell.cpp ATarget.cpp main.cpp
 OBJ			= $(SRC:%.cpp=%.o)
 DEP			= $(SRC:%.cpp=%.d)
 NAME		= aa

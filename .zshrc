@@ -4,6 +4,7 @@ alias a=alias
 alias g=git
 alias gp='git push'
 alias gl='git log'
+alias gss='git status'
 alias m=make
 alias mcl='make clean'
 alias mf='make fclean'
