@@ -33,7 +33,7 @@ public:
 	}
 	void	learnSpell( ASpell* spell )
 	{
-		if (!spells[ spell->getName() ] )
+		if ( spells.find( spell->getName() ) == spells.end() )
 			spells[ spell->getName() ] = spell->clone();
 	}
 	void	forgetSpell( string spellName )
