@@ -10,9 +10,9 @@ private:
 	string	_name;
 	string	_title;
 
-	Warlock() {};
-	Warlock( Warlock const& ) {};
-	Warlock& operator=( Warlock const& ) { return *this; };
+	Warlock() {}
+	Warlock( Warlock const& ) {}
+	Warlock& operator=( Warlock const& ) { return *this; }
 public:
 	Warlock( string const& name, string const& title )
 	: _name( name ), _title ( title )

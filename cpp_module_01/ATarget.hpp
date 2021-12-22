@@ -1,30 +1,29 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "ASpell.hpp"
 
 using namespace std;
 
 class ATarget {
-	ATarget() {};
-protected:
-	string	_name;
-	string	_effects;
+	string	_type;
 public:
+	ATarget() {}
 	ATarget( ATarget const& src )
-	: _name( src._name ), _effects ( src._effects )
+	: _type( src._type )
 	{}
-	ATarget( string const& name, string const& effects )
-	: _name( name ), _effects ( effects )
+	ATarget( string const& type )
+	: _type( type )
 	{}
 	virtual	~ATarget()
 	{}
 	ATarget&			operator=( ATarget const& src )
-	{
-		_name = src._name;
-		_effects = src._effects;
+	{	_type = src._type;
 		return *this;
-	};
-	string const &	getName() const { return _name; }
-	string const &	getEffects() const { return _effects; }
+	}
+	string const &		getType() const { return _type; }
 	virtual ATarget*	clone() const = 0;
+	void				getHitBySpell( ASpell const& spell ) const
+	{	cout << _type << " has been " << spell.getEffects();
+	}
 };
