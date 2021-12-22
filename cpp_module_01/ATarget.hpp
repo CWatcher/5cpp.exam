@@ -24,6 +24,6 @@ public:
 	string const &		getType() const { return _type; }
 	virtual ATarget*	clone() const = 0;
 	void				getHitBySpell( ASpell const& spell ) const
-	{	cout << _type << " has been " << spell.getEffects();
+	{	cout << _type << " has been " << spell.getEffects() << "!\n";
 	}
 };

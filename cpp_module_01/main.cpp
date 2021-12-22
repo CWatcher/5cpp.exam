@@ -1,11 +1,13 @@
 #include <string>
 #include "Warlock.hpp"
+#include "Fwoosh.hpp"
+#include "Dummy.hpp"
 
 int	main( int ac, char* av[] )
 {
 	( void ) ac;
 	( void ) av;
-/*
+
   Warlock richard("Richard", "the Titled");
 
   Dummy bob;
@@ -18,5 +20,4 @@ int	main( int ac, char* av[] )
 
   richard.forgetSpell("Fwoosh");
   richard.launchSpell("Fwoosh", bob);
-*/
 }
