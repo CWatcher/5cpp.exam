@@ -1,0 +1,10 @@
+export PATH=.:$PATH
+export PS1='%~ %% '
+alias a='alias'
+alias cp='cp -r'
+alias g='git'
+alias gl='git log'
+alias gp='git push'
+alias gss='git status'
+alias ll='ls -la'
+alias m='make'
