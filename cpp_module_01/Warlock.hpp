@@ -21,7 +21,11 @@ public:
 	{	cout << _name << ": This looks like another boring day." << endl;
 	}
 	~Warlock()
-	{	cout<< _name << ": My job here is done!" << endl;
+	{
+		map< string, ASpell* >::iterator p = spells.begin();
+		for ( ;	p != spells.end(); p++ )
+			delete p->second;
+		cout<< _name << ": My job here is done!" << endl;
 	}
 	string const&	getName() const { return _name; }
 	string const&	getTitle() const { return _title; }

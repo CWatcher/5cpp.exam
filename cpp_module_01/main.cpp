@@ -20,4 +20,5 @@ int	main( int ac, char* av[] )
 
   richard.forgetSpell("Fwoosh");
   richard.launchSpell("Fwoosh", bob);
+  delete fwoosh;
 }
