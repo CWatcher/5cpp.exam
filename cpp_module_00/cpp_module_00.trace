@@ -1,0 +1,54 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+at-g6.msk.21-school.ru
+Darwin 18.7.0 x86_64
+$> date
+Thu Dec 23 12:48:39 MSK 2021
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: git@vogsphere.msk.21-school.ru:exam-2021-12-23/cwatcher_exam-rank-05_exam_12h11m16s.git
+
+= Git history ==================================================================
+$> git -C /tmp/tmp3Gz1do/user log --pretty='%H - %an, %ad : %s'
+b1a4b95dee61c99a53e253e48a6799e900582ff8 - Carmine Watcher, Thu Dec 23 12:48:22 2021 +0300 : [done]
+daae4b0d80f34cff86781367ce5c76ef9d4b74b3 - Carmine Watcher, Thu Dec 23 12:22:53 2021 +0300 : [boilerplate]
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp3Gz1do/user
+total 16
+-rw-r--r--  1 root  wheel   18 Dec 23 12:48 .gitignore
+-rw-r--r--  1 root  wheel  807 Dec 23 12:48 __GIT_HISTORY
+drwxr-xr-x  8 root  wheel  256 Dec 23 12:48 cpp_module_00
+
+/tmp/tmp3Gz1do/user/cpp_module_00:
+total 48
+-rw-r--r--  1 root  wheel   84 Dec 23 12:48 Makefile
+-rw-r--r--  1 root  wheel   23 Dec 23 12:48 Warlock.cpp
+-rw-r--r--  1 root  wheel  694 Dec 23 12:48 Warlock.hpp
+-rw-r--r--  1 root  wheel  639 Dec 23 12:48 main.cpp
+-rwxr-xr-x  1 root  wheel  278 Dec 23 12:48 subject_out.log
+-rwxr-xr-x  1 root  wheel   84 Dec 23 12:48 t.sh
+ 
+= cpp_module_00 ================================================================
+$> g++ -Wextra -Wall -Werror Warlock.cpp main.cpp -o user_exe 
+
+= Test 1 ===================================================
+$> ./cmtgfx934ag5lty0zwyujtir
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
