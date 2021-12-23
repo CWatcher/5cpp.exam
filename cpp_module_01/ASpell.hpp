@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
-#include <iostream>
 
 using namespace std;
+
+class ATarget;
 
 class ASpell {
 protected:
@@ -16,4 +17,6 @@ public:
 	virtual ~ASpell() {}
 	string const&	getName() const { return _name; }
 	string const&	getEffects() const { return _effects; }
+	virtual ASpell*	clone() const = 0;
+	void			launch( ATarget const& target );
 };

@@ -1,0 +1,75 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-o2.msk.21-school.ru
+Darwin 18.7.0 x86_64
+$> date
+Thu Dec 23 13:59:31 MSK 2021
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: git@vogsphere.msk.21-school.ru:exam-2021-12-23/cwatcher_exam-rank-05_exam_12h11m16s.git
+
+= Git history ==================================================================
+$> git -C /tmp/tmpTb1FHV/user log --pretty='%H - %an, %ad : %s'
+68bb68c31e6e806faf8417e56d1fe14dc61f17a1 - Carmine Watcher, Thu Dec 23 13:59:12 2021 +0300 : [done] module_01
+e856c96a591d5417cbba801f8f4c8f2f99ec4488 - Carmine Watcher, Thu Dec 23 13:07:55 2021 +0300 : [boilerplate][clone] + module_01
+6b98b72cbaa84ce4d9f23aae5f367b0ac999cd92 - Carmine Watcher, Thu Dec 23 12:48:22 2021 +0300 : [done]
+daae4b0d80f34cff86781367ce5c76ef9d4b74b3 - Carmine Watcher, Thu Dec 23 12:22:53 2021 +0300 : [boilerplate]
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpTb1FHV/user
+total 16
+-rw-r--r--   1 root  wheel    18 Dec 23 13:59 .gitignore
+-rw-r--r--   1 root  wheel  2118 Dec 23 13:59 __GIT_HISTORY
+drwxr-xr-x   9 root  wheel   288 Dec 23 13:59 cpp_module_00
+drwxr-xr-x  16 root  wheel   512 Dec 23 13:59 cpp_module_01
+
+/tmp/tmpTb1FHV/user/cpp_module_00:
+total 56
+-rw-r--r--  1 root  wheel    84 Dec 23 13:59 Makefile
+-rw-r--r--  1 root  wheel    23 Dec 23 13:59 Warlock.cpp
+-rw-r--r--  1 root  wheel   694 Dec 23 13:59 Warlock.hpp
+-rw-r--r--  1 root  wheel  2419 Dec 23 13:59 cpp_module_00.trace
+-rw-r--r--  1 root  wheel   639 Dec 23 13:59 main.cpp
+-rwxr-xr-x  1 root  wheel   278 Dec 23 13:59 subject_out.log
+-rwxr-xr-x  1 root  wheel    84 Dec 23 13:59 t.sh
+
+/tmp/tmpTb1FHV/user/cpp_module_01:
+total 112
+-rw-r--r--  1 root  wheel   126 Dec 23 13:59 ASpell.cpp
+-rw-r--r--  1 root  wheel   527 Dec 23 13:59 ASpell.hpp
+-rw-r--r--  1 root  wheel    23 Dec 23 13:59 ATarget.cpp
+-rw-r--r--  1 root  wheel   533 Dec 23 13:59 ATarget.hpp
+-rw-r--r--  1 root  wheel    21 Dec 23 13:59 Dummy.cpp
+-rw-r--r--  1 root  wheel   297 Dec 23 13:59 Dummy.hpp
+-rw-r--r--  1 root  wheel    22 Dec 23 13:59 Fwoosh.cpp
+-rw-r--r--  1 root  wheel   316 Dec 23 13:59 Fwoosh.hpp
+-rw-r--r--  1 root  wheel    84 Dec 23 13:59 Makefile
+-rw-r--r--  1 root  wheel    23 Dec 23 13:59 Warlock.cpp
+-rw-r--r--  1 root  wheel  1274 Dec 23 13:59 Warlock.hpp
+-rw-r--r--  1 root  wheel   330 Dec 23 13:59 main.cpp
+-rwxr-xr-x  1 root  wheel   155 Dec 23 13:59 subject_out.log
+-rwxr-xr-x  1 root  wheel    84 Dec 23 13:59 t.sh
+ 
+= cpp_module_01 ================================================================
+$> g++ -Wextra -Wall -Werror main.cpp Dummy.cpp ASpell.cpp Sheep.cpp Warlock.cpp Fwoosh.cpp ATarget.cpp -o user_exe 
+
+= Test 1 ===================================================
+$> ./y22wvwousjdz4refxugvz0de
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
