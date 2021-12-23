@@ -12,7 +12,7 @@ all		: $(NAME)
 	$(CXX) $(CXXFLAGS) -MMD -c $<
 
 $(NAME)	: $(OBJ) Makefile
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJ)
 
 clean	:
 	$(RM) $(DEP)
@@ -21,7 +21,6 @@ clean	:
 fclean	: clean
 	$(RM) $(NAME)
 
-re		: fclean
-	make
+re		: fclean all
 
 .PHONHY	: all clean fclean re
