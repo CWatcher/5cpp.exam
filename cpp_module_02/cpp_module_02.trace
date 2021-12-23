@@ -1,0 +1,113 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+vo-i4.msk.21-school.ru
+Darwin 18.7.0 x86_64
+$> date
+Thu Dec 23 14:48:14 MSK 2021
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: git@vogsphere.msk.21-school.ru:exam-2021-12-23/cwatcher_exam-rank-05_exam_12h11m16s.git
+
+= Git history ==================================================================
+$> git -C /tmp/tmpLuHrLh/user log --pretty='%H - %an, %ad : %s'
+9ec8bfe6d53e2af5cdda940ef486266cc3561805 - Carmine Watcher, Thu Dec 23 14:44:43 2021 +0300 : [done]
+a5a154bf9ddf074bafc3ab1beb845bd2865ff534 - Carmine Watcher, Thu Dec 23 14:42:06 2021 +0300 : [
+4dd145c07e9867b01de5463c7bf4be5fa3f27329 - Carmine Watcher, Thu Dec 23 14:27:16 2021 +0300 : + SpellBook
+5622a98e5939dd089c6f34509f5498aa1eafe7ec - Carmine Watcher, Thu Dec 23 14:09:03 2021 +0300 : [clone] + more spells and a target
+9c50d2cd5c20367de444949555f431c0eab204f2 - Carmine Watcher, Thu Dec 23 14:04:17 2021 +0300 : [boilerplate][clone] + module_02
+3907638a5dc3476839b76ac1ab6f7dff28552343 - Carmine Watcher, Thu Dec 23 13:59:12 2021 +0300 : [done] module_01
+e856c96a591d5417cbba801f8f4c8f2f99ec4488 - Carmine Watcher, Thu Dec 23 13:07:55 2021 +0300 : [boilerplate][clone] + module_01
+6b98b72cbaa84ce4d9f23aae5f367b0ac999cd92 - Carmine Watcher, Thu Dec 23 12:48:22 2021 +0300 : [done]
+daae4b0d80f34cff86781367ce5c76ef9d4b74b3 - Carmine Watcher, Thu Dec 23 12:22:53 2021 +0300 : [boilerplate]
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpLuHrLh/user
+total 24
+-rw-r--r--   1 root  wheel    18 Dec 23 14:48 .gitignore
+-rw-r--r--   1 root  wheel  4575 Dec 23 14:48 __GIT_HISTORY
+drwxr-xr-x   9 root  wheel   288 Dec 23 14:48 cpp_module_00
+drwxr-xr-x  17 root  wheel   544 Dec 23 14:48 cpp_module_01
+drwxr-xr-x  27 root  wheel   864 Dec 23 14:48 cpp_module_02
+
+/tmp/tmpLuHrLh/user/cpp_module_00:
+total 56
+-rw-r--r--  1 root  wheel    84 Dec 23 14:48 Makefile
+-rw-r--r--  1 root  wheel    23 Dec 23 14:48 Warlock.cpp
+-rw-r--r--  1 root  wheel   694 Dec 23 14:48 Warlock.hpp
+-rw-r--r--  1 root  wheel  2419 Dec 23 14:48 cpp_module_00.trace
+-rw-r--r--  1 root  wheel   639 Dec 23 14:48 main.cpp
+-rwxr-xr-x  1 root  wheel   278 Dec 23 14:48 subject_out.log
+-rwxr-xr-x  1 root  wheel    84 Dec 23 14:48 t.sh
+
+/tmp/tmpLuHrLh/user/cpp_module_01:
+total 120
+-rw-r--r--  1 root  wheel   126 Dec 23 14:48 ASpell.cpp
+-rw-r--r--  1 root  wheel   527 Dec 23 14:48 ASpell.hpp
+-rw-r--r--  1 root  wheel    23 Dec 23 14:48 ATarget.cpp
+-rw-r--r--  1 root  wheel   533 Dec 23 14:48 ATarget.hpp
+-rw-r--r--  1 root  wheel    21 Dec 23 14:48 Dummy.cpp
+-rw-r--r--  1 root  wheel   297 Dec 23 14:48 Dummy.hpp
+-rw-r--r--  1 root  wheel    22 Dec 23 14:48 Fwoosh.cpp
+-rw-r--r--  1 root  wheel   316 Dec 23 14:48 Fwoosh.hpp
+-rw-r--r--  1 root  wheel    84 Dec 23 14:48 Makefile
+-rw-r--r--  1 root  wheel    23 Dec 23 14:48 Warlock.cpp
+-rw-r--r--  1 root  wheel  1274 Dec 23 14:48 Warlock.hpp
+-rw-r--r--  1 root  wheel  3673 Dec 23 14:48 cpp_module_01.trace
+-rw-r--r--  1 root  wheel   330 Dec 23 14:48 main.cpp
+-rwxr-xr-x  1 root  wheel   155 Dec 23 14:48 subject_out.log
+-rwxr-xr-x  1 root  wheel    84 Dec 23 14:48 t.sh
+
+/tmp/tmpLuHrLh/user/cpp_module_02:
+total 208
+-rw-r--r--  1 root  wheel   126 Dec 23 14:48 ASpell.cpp
+-rw-r--r--  1 root  wheel   527 Dec 23 14:48 ASpell.hpp
+-rw-r--r--  1 root  wheel    23 Dec 23 14:48 ATarget.cpp
+-rw-r--r--  1 root  wheel   533 Dec 23 14:48 ATarget.hpp
+-rw-r--r--  1 root  wheel    21 Dec 23 14:48 BrickWall.cpp
+-rw-r--r--  1 root  wheel   336 Dec 23 14:48 BrickWall.hpp
+-rw-r--r--  1 root  wheel    21 Dec 23 14:48 Dummy.cpp
+-rw-r--r--  1 root  wheel   297 Dec 23 14:48 Dummy.hpp
+-rw-r--r--  1 root  wheel    24 Dec 23 14:48 Fireball.cpp
+-rw-r--r--  1 root  wheel   342 Dec 23 14:48 Fireball.hpp
+-rw-r--r--  1 root  wheel    22 Dec 23 14:48 Fwoosh.cpp
+-rw-r--r--  1 root  wheel   316 Dec 23 14:48 Fwoosh.hpp
+-rw-r--r--  1 root  wheel    84 Dec 23 14:48 Makefile
+-rw-r--r--  1 root  wheel    25 Dec 23 14:48 Polymorph.cpp
+-rw-r--r--  1 root  wheel   356 Dec 23 14:48 Polymorph.hpp
+-rw-r--r--  1 root  wheel    25 Dec 23 14:48 SpellBook.cpp
+-rw-r--r--  1 root  wheel   787 Dec 23 14:48 SpellBook.hpp
+-rw-r--r--  1 root  wheel    31 Dec 23 14:48 TargetGenerator.cpp
+-rw-r--r--  1 root  wheel   862 Dec 23 14:48 TargetGenerator.hpp
+-rw-r--r--  1 root  wheel    23 Dec 23 14:48 Warlock.cpp
+-rw-r--r--  1 root  wheel  1086 Dec 23 14:48 Warlock.hpp
+-rw-r--r--  1 root  wheel  6664 Dec 23 14:48 cpp_module_02.trace
+-rw-r--r--  1 root  wheel   691 Dec 23 14:48 main.cpp
+-rwxr-xr-x  1 root  wheel   253 Dec 23 14:48 subject_out.log
+-rwxr-xr-x  1 root  wheel    84 Dec 23 14:48 t.sh
+ 
+= cpp_module_02 ================================================================
+$> g++ -Wextra -Wall -Werror main.cpp Warlock.cpp Fireball.cpp Dummy.cpp ASpell.cpp ATarget.cpp SpellBook.cpp Polymorph.cpp BrickWall.cpp TargetGenerator.cpp Fwoosh.cpp TestSubject.cpp Sheep.cpp -o user_exe 
+
+$> g++ -Wextra -Wall -Werror main.cpp Warlock.cpp Fireball.cpp Dummy.cpp ASpell.cpp ATarget.cpp SpellBook.cpp Polymorph.cpp BrickWall.cpp TargetGenerator.cpp Fwoosh.cpp TestSubject.cpp Sheep.cpp -o ref_exe 
+
+= Test 1 ===================================================
+$> ./o6tgj6085wcegkuti90e4z8o
+$> ./o6tgj6085wcegkuti90e4z8o
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
