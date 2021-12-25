@@ -1,13 +1,7 @@
-#include <string>
 #include "Warlock.hpp"
 
-int	main( int ac, char* av[] )
+int main()
 {
-	( void ) ac;
-	( void ) av;
-
-// For example :
-
 	// Warlock bob;                            //Does not compile
 	// Warlock bob("Bob", "the magnificent");  //Compiles
 	// Warlock jim("Jim", "the nauseating");   //Compiles
@@ -21,6 +15,6 @@ int	main( int ac, char* av[] )
 	jack->introduce();
 	jack->setTitle("the Mighty");
 	jack->introduce();
-	delete jack;
-	return (0);
+
+  delete jack;
 }

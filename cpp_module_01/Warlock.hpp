@@ -7,49 +7,45 @@
 using namespace std;
 
 class Warlock {
-private:
-	string					_name;
-	string					_title;
-	map< string, ASpell* >	spells;
+	string	_name;
+	string	_title;
+	map< string, ASpell* > _spells;
 
 	Warlock() {}
 	Warlock( Warlock const& ) {}
-	Warlock& operator=( Warlock const& ) { return *this; }
+	Warlock&		operator=( Warlock const& ) { return *this; }
 public:
-	Warlock( string const& name, string const& title )
-	: _name( name ), _title ( title )
+	Warlock( string name, string title )
+	: _name( name ), _title( title )
 	{	cout << _name << ": This looks like another boring day." << endl;
 	}
 	~Warlock()
 	{
-		map< string, ASpell* >::iterator p = spells.begin();
-		for ( ;	p != spells.end(); p++ )
+		map< string, ASpell* >::iterator	p = _spells.begin();
+		for ( ; p != _spells.end(); p++ )
 			delete p->second;
-		cout<< _name << ": My job here is done!" << endl;
+		cout << _name << ": My job here is done!\n";
 	}
 	string const&	getName() const { return _name; }
 	string const&	getTitle() const { return _title; }
-	string& 		setTitle( string const& title )
-	{	_title = title; return _title;
+	void			setTitle( const string& title ) { _title = title; }
+
+	void introduce() const
+	{	cout << _name << ": I am " << _name << ", " << _title << "!\n";
 	}
-	void			introduce() const
-	{	cout << _name << ": I am " << _name << ", " << _title << "!" << endl;
-	}
-	void	learnSpell( ASpell* spell )
+	void			learnSpell( ASpell* spell )
 	{
-		if ( spells.find( spell->getName() ) == spells.end() )
-			spells[ spell->getName() ] = spell->clone();
+		delete _spells[ spell->getName() ];
+		_spells[ spell->getName() ] = spell->clone();
 	}
-	void	forgetSpell( string spellName )
+	void			forgetSpell( string spellName )
 	{
-		if ( spells.find( spellName ) != spells.end() )
-		{	delete spells[ spellName ];
-			spells.erase( spellName );
-		}
+		delete _spells[ spellName ];
+		_spells.erase( spellName );
 	}
-	void	launchSpell( string spellName, ATarget& target )
+	void			launchSpell( string spellName, ATarget& target )
 	{
-		if ( spells.find( spellName ) != spells.end() )
-			spells[ spellName ]->launch( target );
+		if ( _spells.find( spellName ) != _spells.end() )
+			_spells[ spellName ]->launch( target );
 	}
 };

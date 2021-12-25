@@ -11,7 +11,7 @@ protected:
 	string	_effects;
 public:
 	ASpell( string name, string effects ): _name( name ), _effects( effects ) {}
-	virtual	~ASpell() {}
+	virtual ~ASpell() {}
 	string const&	getName() const { return _name; }
 	string const&	getEffects() const { return _effects; }
 	virtual ASpell*	clone() const = 0;
